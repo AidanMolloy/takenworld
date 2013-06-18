@@ -1,0 +1,182 @@
+body {
+  background-color: #DBD5D5;
+}
+
+body a {
+  color: #000000;
+}
+
+#header {
+  background-color: #898989;
+  width: 1300px;
+  color: #FFFFFF;
+  font-size: 30px;;
+  border: 1px solid #000000;
+  text-align: center;
+  height: 40px;
+}
+
+#output {
+  margin-left: 25%;
+  margin-right:25%;
+  padding: 10px;
+  border: 1px solid #898989;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+#container {
+  overflow: hidden;
+}
+
+#infobar {
+    background-color: #BCC2CC;
+	width: 1300px;
+	height: 30px;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	font-weight: bold;
+	text-align: center;
+    font-size: 16px;
+}
+
+#username {
+	text-align: left;
+	font-weight: bold;
+	font-size: 19px;
+	margin-left: 280px;
+	margin-top: -40px;
+	font-style: italic;
+}
+
+#yourrank {
+	text-align: left;
+	margin-top: -13px;
+	color: #00F;
+	font-size: 17px;
+	margin-left: 60px;
+}
+
+#yourenergy {
+	margin-top: -40px;
+	font-style: italic;
+	font-size: 16px;
+	text-align: right;
+	margin-right: 680px;
+}
+
+#yourgold {
+	text-align: right;
+	margin-right: 310px;
+	margin-top: -47px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#yourfood {
+	text-align: right;
+    margin-right: 35px;
+	margin-top: -47px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#nextturn {
+	text-align: right;	
+}
+
+#navigation {
+  background-color: #BCC2CC;
+  width: 200px;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+#navigationbar {
+  width: 1300px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 18px;
+}
+
+#navigationbar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#navigationbar a:hover {
+  color: yellow;
+}
+
+#logout {
+  font-size: 15px;
+  text-align: right;
+  margin-right: 50px;
+  color: #898989;
+  font-weight: 100;
+  margin-top: -15px;
+}
+
+#logout:hover {
+  color: blue;
+}
+#navigation a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  color: blue;
+}
+
+#con_div {
+  margin-top: -20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+#content {
+  background-color: #DED6D5;
+  width: 1300px;
+  float: left;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+
+#ranking {
+  margin-left: 20px;
+}
+
+#profile {
+  margin-left: 10px;
+  text-align: center;
+}
+
+#inventory_box {
+  border: 1px solid #7569F5;
+  margin: 5px;
+  float: left;
+  height: 80px;
+  width: 60px;
+  text-align: center;
+  background-color: #F1F0F7;
+}
+
+#footer {
+  background-color: #898989;
+  width: 1300px;
+  color: #FFFFFF;
+  font-size: 12pt;
+  border: 1px solid #000000;
+}
+
+#footer a {
+	color: #FFFFFF !important;
+	text-decoration: none;
+	font-size: 18px !important;
+}
