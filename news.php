@@ -14,9 +14,8 @@ include("header.php");
 <h4>
   <center><li>Building downgrade resources gained for level 10 is fixed!</li>
   <li>Fixed amount of times you can be attacked in 24 hours</li>
-  <li></li>
-  <li>You can't downgrade a building and upgrade it again to get profits</li>
-  <li>Much more small bugs</li></center>
+  <li>You can upgrade all your buildings to level 10</li>
+  <li>More small bugs</li></center>
 </h4>
 
 <p>&nbsp;</p>
