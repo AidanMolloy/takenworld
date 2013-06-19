@@ -12,23 +12,26 @@ if(!isset($_SESSION['uid'])) {
 	$warehouse = protect($_POST['upgradewarehouse']);
 	if (isset($_POST['upgradeshop'])) {
 		$gold_needed = $shopcost;
+		if($buildings['shoplvl'] == 10) {
+        output("The max Shop level is 10.");
+		}
 	}elseif(isset($_POST['upgradefarm'])) {
 		$gold_needed = $farmcost;
+		if($buildings['farmlvl'] == 10) {
+        output("The max Farm level is 10.");
+		}
 	}elseif(isset($_POST['upgradewarehouse'])) {
 		$gold_needed = $warehousecost;
 		$food_needed = $warehousecost;
+		if($buildings['warehouselvl'] == 10) {
+        output("The max Warehouse level is 10.");
+		}
 	};
 	
     if($stats['gold'] < $gold_needed) {
       output("You do not have enough gold.");
 	}elseif($stats['food'] < $food_needed) {
       output("You do not have enough food.");
-	}elseif(isset($warehouse) && $buildings['warehouselvl'] == 10) {
-      output("The max Warehouse level is 10.");
-	}elseif(isset($shop) && $buildings['shoplvl'] == 10) {
-      output("The max Shop level is 10.");
-	}elseif(isset($farm) && $buildings['farmlvl'] == 10) {
-      output("The max Farm level is 10.");
     }else{
      if(isset($_POST['upgradeshop'])) {
 	  $buildings['shoplvl'] += 1;
@@ -58,13 +61,31 @@ if(!isset($_SESSION['uid'])) {
     $shop = protect($_POST['downgradeshop']);
     $farm = protect($_POST['downgradefarm']);
 	$warehouse = protect($_POST['downgradewarehouse']);
+	if ($shopcost == 0) {
+		$shopcost = 39062500;	
+	}elseif ($farmcost == 0) {
+		$farmcost = 39062500;	
+	}elseif ($warehousecost == 0) {
+		$warehousecost =39062500;	
+	}
 	if (isset($_POST['downgradeshop'])) {
-		$gold_gained = ($shopcost / 5);
+		if ($shopcost == 0) {
+		$gold_gained = (39062500 / 5);
+		}else{
+		$gold_gained = ($shopcost / 5);	
+		}
 	}elseif(isset($_POST['downgradefarm'])) {
-		$gold_gained = ($farmcost / 5);
-	}elseif(isset($_POST['downgradeewarehouse'])) {
-		$gold_gained = ($warehousecost / 5);
-		$food_gained = ($warehousecost / 5);
+		if ($farmcost == 0) {
+		$gold_gained = (39062500 / 5);
+		}else{
+		$gold_gained = ($farmcost / 5);	
+		}	
+		}elseif(isset($_POST['downgradeewarehouse'])) {
+		if ($warehousecost == 0) {
+		$gold_gained = (39062500 / 5);
+		}else{
+		$gold_gained = ($warehousecost / 5);	
+		}
 	};
     if(isset($_POST['downgradeshop']) && $shoplvl == 1) {
 		output("The lowest Shop level is 1");
@@ -148,21 +169,46 @@ if(!isset($_SESSION['uid'])) {
     <tr>
       <td>Shop</td>
       <td><?php  echo number_format($shoplvl); ?></td>
-      <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($shopcost /2); ?></td>
+      <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/>
+      <?php 
+	  	if ($shopcost == 0) {
+		$shopcostgain = (39062500 / 5);
+		}else{
+		$shopcostgain = ($shopcost / 5);	
+		}
+	  ?>
+	  <?php echo number_format($shopcostgain); ?></td>
       <td><input type="submit" name="downgradeshop" value="Downgrade" /></td>
     </tr>
     <tr>
       <td>Farm</td>
       <td><?php  echo number_format($farmlvl); ?></td>
-      <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($farmcost /2); ?></td>
+      <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/>
+        <?php 
+	  	if ($farmcost == 0) {
+		$farmcostgain = (39062500 / 5);
+		}else{
+		$farmcostgain = ($farmcost / 5);	
+		}
+	  ?>
+	  <?php echo number_format($farmcostgain); ?></td>
       <td><input type="submit" name="downgradefarm" value="Downgrade" /></td>
     </tr>
     <tr>
       <td>Warehouse</td>
       <td><?php  echo number_format($warehouselvl); ?></td>
       <td>
-      <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($warehousecost /2); ?>
-      <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/><?php echo number_format($warehousecost /2); ?>
+      <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/>
+        <?php 
+	  	if ($warehousecost == 0) {
+		$warehousecostgain = (39062500 / 5);
+		}else{
+		$warehousecostgain = ($warehousecost / 5);	
+		}
+	  ?>
+	  <?php echo number_format($warehousecostgain); ?>
+      <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>
+	  <?php echo number_format($warehousecostgain); ?>
       </td>
       <td><input type="submit" name="downgradewarehouse" value="Downgrade" /></td>
     </tr>

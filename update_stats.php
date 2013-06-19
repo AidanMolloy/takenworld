@@ -8,49 +8,49 @@ $defence = (1 * $unit['soldier'] + 1 * $unit['ranger']);
 $warehouse = $warehouselvl;
 
 if($shoplvl == 1) {
-	$income = 5;
+	$income = 4;
 }elseif($shoplvl == 2) {
-	$income = 20;	
+	$income = 16;	
 }elseif($shoplvl == 3) {
-	$income = 80;	
+	$income = 64;	
 }elseif($shoplvl == 4) {
-	$income = 320;	
+	$income = 256;	
 }elseif($shoplvl == 5) {
-	$income = 1280;	
+	$income = 1024;	
 }elseif($shoplvl == 6) {
-	$income = 5120;	
+	$income = 4096;	
 }elseif($shoplvl == 7) {
-	$income = 20480;	
+	$income = 16384;	
 }elseif($shoplvl == 8) {
-	$income = 81920;	
+	$income = 65536;	
 }elseif($shoplvl == 9) {
-	$income = 327680;	
+	$income = 262144;	
 }elseif($shoplvl == 10) {
-	$income = 1310720;	
+	$income = 1048576;	
 }else{
 	$income = 5;	
 }
 
 if($farmlvl == 1) {
-	$farming = 5;
+	$farming = 4;
 }elseif($farmlvl == 2) {
-	$farming = 20;	
+	$farming = 16;	
 }elseif($farmlvl == 3) {
-	$farming = 80;	
+	$farming = 64;	
 }elseif($farmlvl == 4) {
-	$farming = 320;	
+	$farming = 256;	
 }elseif($farmlvl == 5) {
-	$farming = 1280;	
+	$farming = 1024;	
 }elseif($farmlvl == 6) {
-	$farming = 5120;	
+	$farming = 4096;	
 }elseif($farmlvl == 7) {
-	$farming = 20480;	
+	$farming = 16384;	
 }elseif($farmlvl == 8) {
-	$farming = 81920;	
+	$farming = 65536;	
 }elseif($farmlvl == 9) {
-	$farming = 327680;	
+	$farming = 262144;	
 }elseif($farmlvl == 10) {
-	$farming = 1310720;	
+	$farming = 1048576;	
 }else{
 	$farming = 5;	
 }

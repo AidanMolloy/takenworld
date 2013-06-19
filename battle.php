@@ -4,10 +4,10 @@ include("header.php");
 if(!isset($_SESSION['uid'])){
     echo "You must be logged in to view this page!";
 }else{
+	$id = protect($_POST['id']);
 	$attacks_check = mysql_query("SELECT `id` FROM `logs` WHERE `attacker`='".$_SESSION['uid']."' AND `defender`='".$id."' AND `time`>'".(time() - 86400)."'") or die(mysql_error());
   if(isset($_POST['gold'])) {
     $energy = protect($_POST['energy']);
-    $id = protect($_POST['id']);
     $user_check = mysql_query("SELECT * FROM `stats` WHERE `id`='".$id."'") or die(mysql_error());
     if(mysql_num_rows($user_check) ==0) {
       output("There is no user with that ID!");

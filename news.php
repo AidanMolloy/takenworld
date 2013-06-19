@@ -8,6 +8,20 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<center><h3>Version 1.5.5 BETA Released</h3><h5>19th June 2013</h5></center>
+<center><h4>New in Version 1.5.5 BETA:</h4></center>
+
+<h4>
+  <center><li>Building downgrade resources gained for level 10 is fixed!</li>
+  <li>Fixed amount of times you can be attacked in 24 hours</li>
+  <li></li>
+  <li>You can't downgrade a building and upgrade it again to get profits</li>
+  <li>Much more small bugs</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <center><h3>Version 1.5.0 BETA Released</h3><h5>17th June 2013</h5></center>
 <center><h4>New in Version 1.5.0 BETA:</h4></center>
 

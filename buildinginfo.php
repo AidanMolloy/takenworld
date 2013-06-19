@@ -31,7 +31,7 @@ if($buildings['shoplvl'] == 1) {
 	$shopcost = 39062500;
 }elseif($buildings['shoplvl'] == 10) {
 	$shoplvl = 10;
-	$shopcost = 195312500;
+	$shopcost = 0;
 }else{ 
 $shoplvl = 0;
 $shopcost = 0;
@@ -67,7 +67,7 @@ if($buildings['farmlvl'] == 1) {
 	$farmcost = 39062500;
 }elseif($buildings['farmlvl'] == 10) {
 	$farmlvl = 10;
-	$farmcost = 195312500;
+	$farmcost = 0;
 }else{ 
 $farmlvl = 0; 
 $farmcost = 0;
