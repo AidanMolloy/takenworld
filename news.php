@@ -5,16 +5,34 @@ include("header.php");
       if(isset($_SESSION['uid'])){ ?>
 <center><h2>News</h2></center>
 
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<center><h3>Version 1.5.5 BETA Released</h3><h5>19th June 2013</h5></center>
+<center><h3>Version 1.6.0 BETA Released</h3><h5>21th June 2013</h5></center>
+<center><h4>New in Version 1.6.0 BETA:</h4></center>
+
+<h4>
+  <center><li>NEW UNIT! Tank added</li>
+  <li>The bug where you get - food and gold you now get 0</li>
+  <li>Each page uses less memory</li>
+  <li>Reputation gained now shows after each battle!</li>
+  <li>If you lose a battle you lose half the energy used.</li>
+  <li>2 more Levels added max Level now 18.</li>
+  <li>More small bugs</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<center><h3>Version 1.5.5 BETA Released</h3><h5>20th June 2013</h5></center>
 <center><h4>New in Version 1.5.5 BETA:</h4></center>
 
 <h4>
   <center><li>Building downgrade resources gained for level 10 is fixed!</li>
   <li>Fixed amount of times you can be attacked in 24 hours</li>
   <li>You can upgrade all your buildings to level 10</li>
+  <li>The reputation gained from winning a battle now varies on how much you beat your opponent by!</li>
   <li>More small bugs</li></center>
 </h4>
 
