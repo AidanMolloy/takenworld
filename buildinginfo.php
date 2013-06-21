@@ -7,28 +7,28 @@ if($buildings['shoplvl'] == 1) {
 	$shopcost = 100;
 }elseif($buildings['shoplvl'] == 2) {
 	$shoplvl = 2;
-	$shopcost = 500;
+	$shopcost = 400;
 }elseif($buildings['shoplvl'] == 3) {
 	$shoplvl = 3;
-	$shopcost = 2500;
+	$shopcost = 2000;
 }elseif($buildings['shoplvl'] == 4) {
 	$shoplvl = 4;
-	$shopcost = 12500;
+	$shopcost = 8000;
 }elseif($buildings['shoplvl'] == 5) {
 	$shoplvl = 5;
-	$shopcost = 62500;
+	$shopcost = 16000;
 }elseif($buildings['shoplvl'] == 6) {
 	$shoplvl = 6;
-	$shopcost = 312500;
+	$shopcost = 32000;
 }elseif($buildings['shoplvl'] == 7) {
 	$shoplvl = 7;
-	$shopcost = 1562500;
+	$shopcost = 64000;
 }elseif($buildings['shoplvl'] == 8) {
 	$shoplvl = 8;
-	$shopcost = 7812500;
+	$shopcost = 128000;
 }elseif($buildings['shoplvl'] == 9) {
 	$shoplvl = 9;
-	$shopcost = 39062500;
+	$shopcost = 256000;
 }elseif($buildings['shoplvl'] == 10) {
 	$shoplvl = 10;
 	$shopcost = 0;
@@ -43,28 +43,28 @@ if($buildings['farmlvl'] == 1) {
 	$farmcost = 100;
 }elseif($buildings['farmlvl'] == 2) {
 	$farmlvl = 2;
-	$farmcost = 500;
+	$farmcost = 400;
 }elseif($buildings['farmlvl'] == 3) {
 	$farmlvl = 3;
-	$farmcost = 2500;
+	$farmcost = 2000;
 }elseif($buildings['farmlvl'] == 4) {
 	$farmlvl = 4;
-	$farmcost = 12500;
+	$farmcost = 8000;
 }elseif($buildings['farmlvl'] == 5) {
 	$farmlvl = 5;
-	$farmcost = 62500;
+	$farmcost = 16000;
 }elseif($buildings['farmlvl'] == 6) {
 	$farmlvl = 6;
-	$farmcost = 312500;
+	$farmcost = 32000;
 }elseif($buildings['farmlvl'] == 7) {
 	$farmlvl = 7;
-	$farmcost = 1562500;
+	$farmcost = 64000;
 }elseif($buildings['farmlvl'] == 8) {
 	$farmlvl = 8;
-	$farmcost = 7812500;
+	$farmcost = 128000;
 }elseif($buildings['farmlvl'] == 9) {
 	$farmlvl = 9;
-	$farmcost = 39062500;
+	$farmcost = 256000;
 }elseif($buildings['farmlvl'] == 10) {
 	$farmlvl = 10;
 	$farmcost = 0;
@@ -76,7 +76,7 @@ $farmcost = 0;
 //Warehouse
 if($buildings['warehouselvl'] == 1) {
 	$warehouselvl = 1;
-	$warehousecost = 500;
+	$warehousecost = 400;
 }elseif($buildings['warehouselvl'] == 2) {
 	$warehouselvl = 2;
 	$warehousecost = 500;
