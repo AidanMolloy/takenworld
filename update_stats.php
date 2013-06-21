@@ -1,32 +1,32 @@
 <?php
 include("buildinginfo.php");
 
-$attack = (1 * $unit['soldier'] + 3 * $unit['ranger']);
+$attack = (1 * $unit['soldier'] + 3 * $unit['ranger'] + 2 * $unit['tank']);
 
-$defence = (1 * $unit['soldier'] + 1 * $unit['ranger']);
+$defence = (1 * $unit['soldier'] + 1 * $unit['ranger'] + 4 * $unit['tank']);
 
 $warehouse = $warehouselvl;
 
 if($shoplvl == 1) {
 	$income = 4;
 }elseif($shoplvl == 2) {
-	$income = 16;	
+	$income = 12;	
 }elseif($shoplvl == 3) {
-	$income = 64;	
+	$income = 36;	
 }elseif($shoplvl == 4) {
-	$income = 256;	
+	$income = 108;	
 }elseif($shoplvl == 5) {
-	$income = 1024;	
+	$income = 324;	
 }elseif($shoplvl == 6) {
-	$income = 4096;	
+	$income = 972;	
 }elseif($shoplvl == 7) {
-	$income = 16384;	
+	$income = 2916;	
 }elseif($shoplvl == 8) {
-	$income = 65536;	
+	$income = 8748;	
 }elseif($shoplvl == 9) {
-	$income = 262144;	
+	$income = 26244;	
 }elseif($shoplvl == 10) {
-	$income = 1048576;	
+	$income = 78732;	
 }else{
 	$income = 5;	
 }
@@ -34,23 +34,23 @@ if($shoplvl == 1) {
 if($farmlvl == 1) {
 	$farming = 4;
 }elseif($farmlvl == 2) {
-	$farming = 16;	
+	$farming = 12;	
 }elseif($farmlvl == 3) {
-	$farming = 64;	
+	$farming = 36;	
 }elseif($farmlvl == 4) {
-	$farming = 256;	
+	$farming = 108;	
 }elseif($farmlvl == 5) {
-	$farming = 1024;	
+	$farming = 324;	
 }elseif($farmlvl == 6) {
-	$farming = 4096;	
+	$farming = 972;	
 }elseif($farmlvl == 7) {
-	$farming = 16384;	
+	$farming = 2916;	
 }elseif($farmlvl == 8) {
-	$farming = 65536;	
+	$farming = 8748;	
 }elseif($farmlvl == 9) {
-	$farming = 262144;	
+	$farming = 26244;	
 }elseif($farmlvl == 10) {
-	$farming = 1048576;	
+	$farming = 78732;	
 }else{
 	$farming = 5;	
 }
@@ -58,23 +58,23 @@ if($farmlvl == 1) {
 if($warehouse == 1) {
 	$capacity = 500;
 }elseif($warehouse == 2){
-	$capacity = 2000;
+	$capacity = 1500;
 }elseif($warehouse == 3){
-	$capacity = 8000;
+	$capacity = 4500;
 }elseif($warehouse == 4){
-	$capacity = 32000;
+	$capacity = 13500;
 }elseif($warehouse == 5){
-	$capacity = 128000;
+	$capacity = 40500;
 }elseif($warehouse == 6){
-	$capacity = 512000;
+	$capacity = 121500;
 }elseif($warehouse == 7){
-	$capacity = 2048000;
+	$capacity = 364500;
 }elseif($warehouse == 8){
-	$capacity = 8192000;
+	$capacity = 1093500;
 }elseif($warehouse == 9){
-	$capacity = 32768000;
+	$capacity = 3280500;
 }elseif($warehouse == 10){
-	$capacity = 131072000;
+	$capacity = 9841500;
 }else{
 	$capacity = 500;
 }
