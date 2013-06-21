@@ -27,7 +27,7 @@ if(isset($_POST['register'])){
             echo "That e-mail address is already in use!";
         }else{
             $ins1 = mysql_query("INSERT INTO `stats` (`gold`,`attack`,`defence`,`food`,`income`,`farming`,`energy`,`reputation`) VALUES (100,5,10,100,5,5,100,1)") or die(mysql_error());
-            $ins2 = mysql_query("INSERT INTO `unit` (`soldier`,`ranger`) VALUES (5,0)") or die(mysql_error());
+            $ins2 = mysql_query("INSERT INTO `unit` (`soldier`,`ranger`,`tank`) VALUES (5,0,0)") or die(mysql_error());
             $ins3 = mysql_query("INSERT INTO `user` (`username`,`password`,`email`) VALUES ('$username','".md5($password)."','$email')") or die(mysql_error());
             $ins5 = mysql_query("INSERT INTO `ranking` (`reputation`,`overall`) VALUES(0,0)") or die(mysql_error());	
 			$ins6 = mysql_query("INSERT INTO `buildings` (`shoplvl`,`farmlvl`,`warehouselvl`) VALUES (1,1,1)") or die(mysql_error());
