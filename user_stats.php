@@ -4,37 +4,41 @@ if(isset($_SESSION['uid'])){
   include("safe.php");
   
   if($stats['reputation'] == 1 || $stats['reputation'] == 0) {
-  $rrank = "1 [Private]";
+  $rrank = "Level 1";
   }elseif($stats['reputation'] == 2) {
-  $rrank = "2 [Private First Class]";
-  }elseif($stats['reputation'] > 2 && $stats['reputation'] < 5) {
-  $rrank = "3 [Corporal]";
-  }elseif($stats['reputation'] > 3 && $stats['reputation'] < 10) {
-  $rrank = "4 [Sergeant]";
-  }elseif($stats['reputation'] > 7 && $stats['reputation'] < 20) {
-  $rrank = "5 [Sergeant First Class]";
-  }elseif($stats['reputation'] > 15 && $stats['reputation'] < 40) {
-  $rrank = "6 [Sergeant Major]";
-  }elseif($stats['reputation'] > 31 && $stats['reputation'] < 80) {
-  $rrank = "7 [Second Lieutenant]";
-  }elseif($stats['reputation'] > 63 && $stats['reputation'] < 160) {
-  $rrank = "8 [First Lieutenant]";
-  }elseif($stats['reputation'] > 127 && $stats['reputation'] < 320) {
-  $rrank = "9 [Captain]";
-  }elseif($stats['reputation'] > 255 && $stats['reputation'] < 640) {
-  $rrank = "10 [Major]";
-  }elseif($stats['reputation'] > 511 && $stats['reputation'] < 1280) {
-  $rrank = "11 [Lieutenant Colonel]";
-  }elseif($stats['reputation'] > 1023 && $stats['reputation'] < 2560) {
-  $rrank = "12 [Colonel]";
-  }elseif($stats['reputation'] > 2047 && $stats['reputation'] < 5120) {
-  $rrank = "13 [Brigadier General]";
-  }elseif($stats['reputation'] > 4095 && $stats['reputation'] < 10240) {
-  $rrank = "14 [Major General]";
-  }elseif($stats['reputation'] > 8191 && $stats['reputation'] < 20480) {
-  $rrank = "15 [Lieutenant General]";
+  $rrank = "Level 2";
+  }elseif($stats['reputation'] > 2 && $stats['reputation'] < 6) {
+  $rrank = "Level 3";
+  }elseif($stats['reputation'] > 6 && $stats['reputation'] < 15) {
+  $rrank = "Level 4";
+  }elseif($stats['reputation'] > 15 && $stats['reputation'] < 25) {
+  $rrank = "Level 5";
+  }elseif($stats['reputation'] > 25 && $stats['reputation'] < 50) {
+  $rrank = "Level 6";
+  }elseif($stats['reputation'] > 50 && $stats['reputation'] < 100) {
+  $rrank = "Level 7";
+  }elseif($stats['reputation'] > 100 && $stats['reputation'] < 170) {
+  $rrank = "Level 8";
+  }elseif($stats['reputation'] > 170 && $stats['reputation'] < 350) {
+  $rrank = "Level 9";
+  }elseif($stats['reputation'] > 350 && $stats['reputation'] < 700) {
+  $rrank = "Level 10";
+  }elseif($stats['reputation'] > 700 && $stats['reputation'] < 1500) {
+  $rrank = "Level 11";
+  }elseif($stats['reputation'] > 1500 && $stats['reputation'] < 3000) {
+  $rrank = "Level 12";
+  }elseif($stats['reputation'] > 3000 && $stats['reputation'] < 6500) {
+  $rrank = "Level 13";
+  }elseif($stats['reputation'] > 6500 && $stats['reputation'] < 15000) {
+  $rrank = "Level 14";
+  }elseif($stats['reputation'] > 15000 && $stats['reputation'] < 30000) {
+  $rrank = "Level 15";
+  }elseif($stats['reputation'] > 30000 && $stats['reputation'] < 50000){
+  $rrank = "Level 16";
+  }elseif($stats['reputation'] > 50000 && $stats['reputation'] < 100000){
+  $rrank = "Level 17";
   }else{ 
-  $rrank = "16 [General]";
+  $rrank = "Level 18";
   };
   
   $update_rank = mysql_query("UPDATE `ranking` SET 
