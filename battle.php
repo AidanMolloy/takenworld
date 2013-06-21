@@ -28,9 +28,15 @@ if(!isset($_SESSION['uid'])){
         echo "Your units dealt " . number_format($attack_effect) . " damage!<br>";
         echo "The enemy's units dealt " . number_format($defence_effect) . " damage!<br><br>";
         if($attack_effect > $defence_effect){
+		$reputationGain = $attack_effect -= $defence_effect; 
         $ratio = ($attack_effect- $defence_effect)/$attack_effect * $energy;
         $ratio = min($ratio,1);
         $gold_stolen = floor($ratio * $enemy_stats['gold']);
+        
+        if($gold_stolen < 0) {
+        	$gold_stolen = 0;
+        }
+		$reputationGained = ($reputationGain / 10);
 		
 		$goldcapacityleft = $stats['capacity'];
 		$goldcapacityleft -= $stats['gold'];
@@ -48,20 +54,18 @@ if(!isset($_SESSION['uid'])){
 			
 			$battle9 = mysql_query("UPDATE `stats` SET `gold`=`gold`-'".$gold_stolen."'+'".$goldovercap."' WHERE `id`='".$id."'") or die(mysql_error());
 			$battle10 = mysql_query("UPDATE `stats` SET `gold`='".$gold."', `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
-			$battle11 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'2' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
+			$battle11 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'".$reputationGained."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
 			$battle12 = mysql_query("INSERT INTO `logs` (`attacker`,`defender`,`attacker_damage`,`defender_damage`,`gold`,`food`,`time`)
                                 VALUES ('".$_SESSION['uid']."','".$id."','".$attack_effect."','".$defence_effect."','".$gold_stolen."','0','".time()."')") or die(mysql_error());
 		}else{
-		
-		if($gold > $stats['capacity']) {
-			$gold = $stats['capacity'];
-		};
 			
-        echo "You won the battle! You stole " . $gold_stolen . " gold!<br>";
-        echo "You got 2 points!";
+        echo "You won the battle!<br>";
+		echo "You stole " . $gold_stolen . " gold!<br>";
+		echo "You beat your opponent by " .  number_format($reputationGain) . "<br>";
+        echo "You got " . number_format($reputationGained) . " points!";
         $battle1 = mysql_query("UPDATE `stats` SET `gold`=`gold`-'".$gold_stolen."' WHERE `id`='".$id."'") or die(mysql_error());
         $battle2 = mysql_query("UPDATE `stats` SET `gold`='".$gold."', `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
-        $battle3 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'2' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
+        $battle3 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'".$reputationGained."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
         $battle4 = mysql_query("INSERT INTO `logs` (`attacker`,`defender`,`attacker_damage`,`defender_damage`,`gold`,`food`,`time`)
                                 VALUES ('".$_SESSION['uid']."','".$id."','".$attack_effect."','".$defence_effect."','".$gold_stolen."','0','".time()."')") or die(mysql_error());
         $stats['gold'] = $gold;
@@ -70,7 +74,9 @@ if(!isset($_SESSION['uid'])){
         };
       }else{
         echo "You lost the battle!";
+		$energy = ($energy / 2);
         $stats['energy'] -= $energy;
+		$battle17 = mysql_query("UPDATE `stats` SET `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
       }
     }
   }elseif(isset($_POST['food'])) {
@@ -94,9 +100,15 @@ if(!isset($_SESSION['uid'])){
         echo "Your units dealt " . number_format($attack_effect) . " damage!<br>";
         echo "The enemy's defenders dealt " . number_format($defence_effect) . " damage!<br><br>";
         if($attack_effect > $defence_effect){
+		$reputationGain = $attack_effect -= $defence_effect; 
         $ratio = ($attack_effect- $defence_effect)/$attack_effect * $energy;
         $ratio = min($ratio,1);
         $food_stolen = floor($ratio * $enemy_stats['food']);
+        
+        if($food_stolen < 0) {
+        	$food_stolen = 0;
+        }
+		$reputationGained = ($reputationGain / 10);
 		
 		$foodcapacityleft = $stats['capacity'];
 		$foodcapacityleft -= $stats['food'];
@@ -114,21 +126,18 @@ if(!isset($_SESSION['uid'])){
 			
 			$battle13 = mysql_query("UPDATE `stats` SET `food`=`food`-'".$food_stolen."'+'".$foodovercap."' WHERE `id`='".$id."'") or die(mysql_error());
 			$battle14 = mysql_query("UPDATE `stats` SET `food`='".$food."', `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
-			$battle15 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'2' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
+			$battle15 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'".$reputationGained."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
 			$battle16 = mysql_query("INSERT INTO `logs` (`attacker`,`defender`,`attacker_damage`,`defender_damage`,`gold`,`food`,`time`)
                                 VALUES ('".$_SESSION['uid']."','".$id."','".$attack_effect."','".$defence_effect."','".$gold_stolen."','0','".time()."')") or die(mysql_error());
 		}else{
 		
 		
-		if($food > $stats['capacity']) {
-			$food = $stats['capacity'];
-		};
-		
         echo "You won the battle! You stole " . $food_stolen . " food!<br>"; 
-        echo "You got 2 points!";
+		echo "You beat your opponent by " .  number_format($reputationGain) . "<br>";
+        echo "You got " . number_format($reputationGained) . " points!";
         $battle5 = mysql_query("UPDATE `stats` SET `food`=`food`-'".$food_stolen."' WHERE `id`='".$id."'") or die(mysql_error());
         $battle6 = mysql_query("UPDATE `stats` SET `food`='".$food."', `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
-        $battle7 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'2' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
+        $battle7 = mysql_query("UPDATE `stats` SET `reputation`=`reputation`+'".$reputationGained."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
         $battle8 = mysql_query("INSERT INTO `logs` (`attacker`,`defender`,`attacker_damage`,`defender_damage`,`gold`,`food`,`time`)
                                 VALUES ('".$_SESSION['uid']."','".$id."','".$attack_effect."','".$defence_effect."','0','".$food_stolen."','".time()."')") or die(mysql_error());
         $stats['food'] = $food;
@@ -137,7 +146,9 @@ if(!isset($_SESSION['uid'])){
         };
       }else{
         echo "You lost the battle!";
+		$energy = ($energy / 2);
         $stats['energy'] -= $energy;
+        $battle18 = mysql_query("UPDATE `stats` SET `energy`=`energy`-'".$energy."' WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
       }
     }
   }else{
