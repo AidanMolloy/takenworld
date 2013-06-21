@@ -48,7 +48,7 @@ body a {
 	text-align: left;
 	font-weight: bold;
 	font-size: 19px;
-	margin-left: 280px;
+	margin-left: 200px;
 	margin-top: -40px;
 	font-style: italic;
 }
@@ -58,20 +58,20 @@ body a {
 	margin-top: -13px;
 	color: #00F;
 	font-size: 17px;
-	margin-left: 60px;
+	margin-left: 50px;
 }
 
 #yourenergy {
-	margin-top: -40px;
+	margin-top: -41px;
 	font-style: italic;
 	font-size: 16px;
 	text-align: right;
-	margin-right: 680px;
+	margin-right: 850px;
 }
 
 #yourgold {
 	text-align: right;
-	margin-right: 310px;
+	margin-right: 480px;
 	margin-top: -47px;
 	font-size: 15px;
 	font-weight: bold;
@@ -79,7 +79,7 @@ body a {
 
 #yourfood {
 	text-align: right;
-    margin-right: 35px;
+    margin-right: 100px;
 	margin-top: -47px;
 	font-size: 15px;
 	font-weight: bold;
