@@ -37,8 +37,12 @@ if(isset($_SESSION['uid'])){
   $rrank = "Level 16";
   }elseif($stats['reputation'] > 50000 && $stats['reputation'] < 100000){
   $rrank = "Level 17";
-  }else{ 
+  }elseif($stats['reputation'] > 100000 && $stats['reputation'] < 20000){
   $rrank = "Level 18";
+  }elseif($stats['reputation'] > 200000 && $stats['reputation'] < 350000){
+  $rrank = "Level 19";
+  }else{ 
+  $rrank = "Level 20";
   };
   
   $update_rank = mysql_query("UPDATE `ranking` SET 
