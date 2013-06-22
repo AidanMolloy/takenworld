@@ -37,7 +37,7 @@ if(isset($_SESSION['uid'])){
   $rrank = "Level 16";
   }elseif($stats['reputation'] > 50000 && $stats['reputation'] < 100000){
   $rrank = "Level 17";
-  }elseif($stats['reputation'] > 100000 && $stats['reputation'] < 20000){
+  }elseif($stats['reputation'] > 100000 && $stats['reputation'] < 200000){
   $rrank = "Level 18";
   }elseif($stats['reputation'] > 200000 && $stats['reputation'] < 350000){
   $rrank = "Level 19";
