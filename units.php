@@ -38,6 +38,11 @@ if(!isset($_SESSION['uid'])) {
                                   
       include("update_stats.php");
       output("You have trained your Units!");
+    
+	   ?>
+	   <meta http-equiv="refresh" content="2">
+       <?php
+	  
     }
   }elseif(isset($_POST['untrain'])) {
     $soldier = protect($_POST['soldier']);
@@ -65,10 +70,15 @@ if(!isset($_SESSION['uid'])) {
                                   
       $stats['gold'] += $gold_gained;
       $update_gold = mysql_query("UPDATE `stats` SET `gold`='".$stats['gold']."'
-        			  WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
+      				  WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
       				  
       include("update_stats.php");
       output("You have untrained your Units!");
+	  
+	  	?>
+	   <meta http-equiv="refresh" content="2">
+       <?php
+	  
     }
   }
   ?>
