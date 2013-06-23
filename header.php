@@ -54,13 +54,10 @@ include("user_stats.php");
         </p>
         &raquo; <a href ="register.php">Register For Free!</a>
         </div>
-        <div id="content">
       <?php
       }
       if(isset($_SESSION['uid'])){
 	  }?>
       
-      <div id="content"><div id="resource">
-      <?php  ?>
-      </div><div id="con_div">
+      <div id="content"><div id="con_div">
       
