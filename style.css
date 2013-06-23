@@ -1,5 +1,5 @@
 body {
-  background-color: #DBD5D5;
+  background-color: #E3E4E8;
 }
 
 body a {
@@ -21,7 +21,7 @@ body a {
   margin-right:25%;
   padding: 10px;
   border: 1px solid #898989;
-  font-weight: bold;
+  font-weight: bold; 
   color: blue;
   text-align: center;
   height: 30px;
@@ -161,8 +161,8 @@ body a {
   border: 1px solid #7569F5;
   margin: 5px;
   float: left;
-  height: 80px;
-  width: 60px;
+  height: 100px;
+  width: 90px;
   text-align: center;
   background-color: #F1F0F7;
 }
