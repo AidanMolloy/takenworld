@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("header.php");
+include("user_stats");
 if(!isset($_SESSION['uid'])){
     echo "You must be logged in to view this page!";
 }else{
@@ -104,7 +105,8 @@ if(!isset($_SESSION['uid'])){
         if($food_stolen < 0) {
         	$food_stolen = 0;
         }
-		$reputationGained = ($reputationGain / 10);
+		$reputationGained = ($reputationGain / 100);
+		$reputationGained*$userlevel; 
 		
 		$foodcapacityleft = $stats['capacity'];
 		$foodcapacityleft -= $stats['food'];
