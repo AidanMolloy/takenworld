@@ -28,10 +28,8 @@ if(!isset($_SESSION['uid'])){
         echo "Your units dealt " . number_format($attack_effect) . " damage!<br>";
         echo "The enemy's units dealt " . number_format($defence_effect) . " damage!<br><br>";
         if($attack_effect > $defence_effect){
-		$reputationGain = $attack_effect -= $defence_effect; 
-        $ratio = ($attack_effect- $defence_effect)/$attack_effect * $energy;
-        $ratio = min($ratio,1);
-        $gold_stolen = floor($ratio * $enemy_stats['gold']);
+		$reputationGain = $attack_effect -= $defence_effect;
+        $gold_stolen = $enemy_stats['gold'];
         
         if($gold_stolen < 0) {
         	$gold_stolen = 0;
@@ -100,10 +98,8 @@ if(!isset($_SESSION['uid'])){
         echo "Your units dealt " . number_format($attack_effect) . " damage!<br>";
         echo "The enemy's defenders dealt " . number_format($defence_effect) . " damage!<br><br>";
         if($attack_effect > $defence_effect){
-		$reputationGain = $attack_effect -= $defence_effect; 
-        $ratio = ($attack_effect- $defence_effect)/$attack_effect * $energy;
-        $ratio = min($ratio,1);
-        $food_stolen = floor($ratio * $enemy_stats['food']);
+		$reputationGain = $attack_effect -= $defence_effect;
+        $food_stolen = $enemy_stats['food'];
         
         if($food_stolen < 0) {
         	$food_stolen = 0;
