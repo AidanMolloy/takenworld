@@ -5,11 +5,25 @@ include("header.php");
       if(isset($_SESSION['uid'])){ ?>
 <center><h2>News</h2></center>
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<center><h3>Version 1.6.5 BETA Released</h3><h5>23rd June 2013</h5></center>
+<center><h4>New in Version 1.6.1 BETA:</h4></center>
+
+<h4>
+  <center><li>Tank added to inventory page</li>
+  <li>When you train a unit the page refresh's after 2 seconds.</li>
+  <li>Content area background change of colour glitch fixed</li>
+  <li>Every page takes up less memory</li>
+  <li>When you attack someone and you win you will get gold/food.</li>
+  <li>More small bugs</li></center>
+</h4>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<center><h3>Version 1.6.0 BETA Released</h3><h5>21th June 2013</h5></center>
+<center><h3>Version 1.6.0 BETA Released</h3><h5>21st June 2013</h5></center>
 <center><h4>New in Version 1.6.0 BETA:</h4></center>
 
 <h4>
@@ -39,7 +53,7 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<center><h3>Version 1.5.0 BETA Released</h3><h5>17th June 2013</h5></center>
+<center><h3>Version 1.5.0 BETA Released</h3><h5>18th June 2013</h5></center>
 <center><h4>New in Version 1.5.0 BETA:</h4></center>
 
 <h4>
@@ -53,7 +67,7 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<center><h3>Version 1.4.0 BETA Released</h3><h5>17th June 2013</h5></center>
+<center><h3>Version 1.4.0 BETA Released</h3><h5>16th June 2013</h5></center>
 <center><h4>New in Version 1.4.0 BETA:</h4></center>
 
 <h4>
