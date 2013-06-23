@@ -54,7 +54,7 @@ if(!isset($_SESSION['uid'])) {
                                   WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
       output("You have Upgraded your building!");
 	    ?>
-	   <meta http-equiv="refresh" content="3">
+	   <meta http-equiv="refresh" content="2">
        <?php
     }
   }elseif(isset($_POST['downgradeshop']) || isset($_POST['downgradefarm']) || isset($_POST['downgradewarehouse'])) {
@@ -117,7 +117,7 @@ if(!isset($_SESSION['uid'])) {
 								  
       output("You have Downgraded your buildings!");
 	    ?>
-	   <meta http-equiv="refresh" content="3">
+	   <meta http-equiv="refresh" content="2">
        <?php
     }
   }
