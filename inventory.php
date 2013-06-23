@@ -10,15 +10,25 @@ if(!isset($_SESSION['uid'])){
   <br />
     
     <div id="inventory_box">
-      <h3>Soldier
-      <i><b><?php echo $unit['soldier']; ?></h3></b></i>
+      <h3>Soldier<br />
+      <i><b><?php echo number_format($unit['soldier']); ?></h3></b></i>
     </div>
     
     <div id="inventory_box">
-      <h3>Ranger
-      <i><?php echo $unit['ranger']; ?></h3></i>
+      <h3>Ranger<br />
+      <i><?php echo number_format($unit['ranger']); ?></h3></i>
     </div>
     
+     <div id="inventory_box">
+      <h3>Tank<br />
+      <i><?php echo number_format($unit['tank']); ?></h3></i>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div id="inventory_box">
       <h3>Shop level
       <i><?php echo $buildings['shoplvl']; ?></h3></i>
