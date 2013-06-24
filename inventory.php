@@ -39,6 +39,11 @@ if(!isset($_SESSION['uid'])){
       <i><?php echo $buildings['farmlvl']; ?></h3></i>
     </div>
   
+    <div id="inventory_box">
+      <h3>Warehouse level
+      <i><?php echo $buildings['warehouselvl']; ?></h3></i>
+    </div>
+  
   <?php
 }
 
