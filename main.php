@@ -16,7 +16,7 @@ if(!isset($_SESSION['uid'])){
     
     <tr>
       <h3>Points: 
-      <i><?php echo $stats['reputation']; ?></h3></i>
+      <i><?php echo number_format($stats['reputation']); ?></h3></i>
     </tr>
     
     </tr>
@@ -26,11 +26,11 @@ if(!isset($_SESSION['uid'])){
 
     <tr>
       <h3><center>Gold:
-      <i><?php echo $stats['gold']; ?></center></h3></i>
+      <i><?php echo number_format($stats['gold']); ?></center></h3></i>
     </tr>
     <tr>
       <h3><center>Food:
-      <i><?php echo $stats['food']; ?></center></h3></i>
+      <i><?php echo number_format($stats['food']); ?></center></h3></i>
     <tr>
     </table></div>
   <?php
