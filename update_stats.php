@@ -36,7 +36,7 @@ if($shoplvl == 1) {
 	$nxtlvlincome = 50000;
 }elseif($shoplvl == 10) {
 	$income = 50000;
-	$nxtlvlincome = "Max Level";
+	$nxtlvlincome = 0;
 }else{
 	$income = 5;	
 }
@@ -70,7 +70,7 @@ if($farmlvl == 1) {
 	$nxtlvlfarming = 5000;
 }elseif($farmlvl == 10) {
 	$farming = 50000;
-	$nxtlvlfarming = "Max Level";
+	$nxtlvlfarming = 0;
 }else{
 	$farming = 5;	
 }
@@ -104,7 +104,7 @@ if($warehouse == 1) {
 	$nxtlvlcapacity = 9000000;
 }elseif($warehouse == 10){
 	$capacity = 9000000;
-	$nxtlvlcapacity = "Max Level";
+	$nxtlvlcapacity = 0;
 }else{
 	$capacity = 500;
 }
