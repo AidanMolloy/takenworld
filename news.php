@@ -8,8 +8,21 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<center><h3>Version 1.7.0 BETA Released</h3><h5>24th June 2013</h5></center>
+<center><h4>New in Version 1.7.0 BETA:</h4></center>
+
+<h4>
+  <center><li>On buildings page you can now see what income farming and capacity you get for upgrading</li>
+  <li>Income and Farming is now even numbers</li>
+  <li>On the units page it shows what each unit's attack and defence is!</li>
+  <li>More small bugs</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <center><h3>Version 1.6.5 BETA Released</h3><h5>23rd June 2013</h5></center>
-<center><h4>New in Version 1.6.1 BETA:</h4></center>
+<center><h4>New in Version 1.6.5 BETA:</h4></center>
 
 <h4>
   <center><li>Tank added to inventory page</li>
