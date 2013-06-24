@@ -2,6 +2,7 @@
 session_start();
 include("header.php");
 include("buildinginfo.php");
+include("update_stats.php");
 
 if(!isset($_SESSION['uid'])) {
   echo "You must be logged in to view this page";
@@ -132,18 +133,21 @@ if(!isset($_SESSION['uid'])) {
       <td><b>Building</b></td>
       <td><b>Level of Building</b></td>
       <td><b>Building Cost</b></td>
+      <td><b>Next level</b></td>
       <td><b>Upgrade</b></td>
     </tr>
     <tr>
       <td>Shop</td>
       <td><?php  echo number_format($shoplvl); ?></td>
       <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($shopcost); ?></td>
+      <td>Income: <?php echo number_format($nxtlvlincome);?></td>
       <td><input type="submit" name="upgradeshop" value="Upgrade" /></td>
     </tr>
     <tr>
       <td>Farm</td>
       <td><?php  echo number_format($farmlvl); ?></td>
       <td><img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($farmcost); ?></td>
+      <td>Farming: <?php echo number_format($nxtlvlfarming); ?></td>
       <td><input type="submit" name="upgradefarm" value="Upgrade" /></td>
     </tr>
     <tr>
@@ -153,6 +157,7 @@ if(!isset($_SESSION['uid'])) {
       <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($warehousecost); ?>
       <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/><?php echo number_format($warehousecost); ?>
       </td>
+      <td>Capacity: <?php echo number_format($nxtlvlcapacity); ?></td>
       <td><input type="submit" name="upgradewarehouse" value="Upgrade" /></td>
     </tr>
   </table>
