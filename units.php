@@ -99,14 +99,16 @@ if(!isset($_SESSION['uid'])) {
       <td>Soldier</td>
       <td><?php  echo number_format($unit['soldier']); ?></td>
       <td><img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>10</td>
-      <td>Attack: 1 Defence: 1</td>
+      <td>Attack: 1 <br />
+      Defence: 1</td>
       <td><input type="text" name="soldier" /></td>
     </tr>
     <tr>
       <td>Ranger</td>
       <td><?php  echo number_format($unit['ranger']); ?></td>
       <td><img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>18</td>
-      <td>Attack: 3 Defence: 1</td>
+      <td>Attack: 3<br />
+Defence: 1</td>
       <td><input type="text" name="ranger" /></td>
     </tr>
     <tr>
@@ -116,7 +118,8 @@ if(!isset($_SESSION['uid'])) {
       <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>15
       <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/>15
       </td>
-      <td>Attack: 2 Defence: 4</td>
+      <td>Attack: 2 <br />
+      Defence: 4</td>
       <td><input type="text" name="tank" /></td>
     </tr>
     <tr>
@@ -134,20 +137,23 @@ if(!isset($_SESSION['uid'])) {
       <td><b>Unit Type</b></td>
       <td><b>Number of Units</b></td>
       <td><b>Food Gained</b></td>
+      <td><b>Unit Stats</b></td>
       <td><b>Untrain More</b></td>
     </tr>
     <tr>
       <td>Soldier</td>
       <td><?php  echo number_format($unit['soldier']); ?></td>
       <td><img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>8</td>
-      <td>Attack: 1 Defence: 1</td>
+      <td>Attack: 1<br />
+Defence: 1</td>
       <td><input type="text" name="soldier" /></td>
     </tr>
     <tr>
       <td>Ranger</td>
       <td><?php  echo number_format($unit['ranger']); ?></td>
       <td><img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>13</td>
-      <td>Attack: 3 Defence: 1</td>
+      <td>Attack: 3 <br />
+      Defence: 1</td>
       <td><input type="text" name="ranger" /></td>
     </tr>
     <tr>
@@ -157,7 +163,8 @@ if(!isset($_SESSION['uid'])) {
       <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/>10
       <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/>10
       </td>
-      <td>Attack: 2 Defence: 4</td>
+      <td>Attack: 2 <br />
+      Defence: 4</td>
       <td><input type="text" name="tank" /></td>
     </tr>
     <tr>
