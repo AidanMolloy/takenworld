@@ -67,7 +67,7 @@ if($farmlvl == 1) {
 	$nxtlvlfarming = 10000;
 }elseif($farmlvl == 9) {
 	$farming = 10000;
-	$nxtlvlfarming = 5000;
+	$nxtlvlfarming = 50000;
 }elseif($farmlvl == 10) {
 	$farming = 50000;
 	$nxtlvlfarming = 0;
