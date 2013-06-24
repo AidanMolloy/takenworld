@@ -15,6 +15,7 @@ include("header.php");
   <center><li>On buildings page you can now see what income farming and capacity you get for upgrading</li>
   <li>Income and Farming is now even numbers</li>
   <li>On the units page it shows what each unit's attack and defence is!</li>
+  <li>Warehouse level shown in inventory page</li>
   <li>More small bugs</li></center>
 </h4>
 
