@@ -157,7 +157,7 @@ if(!isset($_SESSION['uid'])) {
       <img src="images/gold_icon1.png" alt="Logo" width="22" height="22"  title="Gold"/><?php echo number_format($warehousecost); ?>
       <img src="images/food_icon.png" alt="Logo" width="27" height="24"  title="Food"/><?php echo number_format($warehousecost); ?>
       </td>
-      <td><?php echo number_format($nxtlvlcapacity); ?> Per Turn</td>
+      <td><?php echo number_format($nxtlvlcapacity); ?> Capacity</td>
       <td><input type="submit" name="upgradewarehouse" value="Upgrade" /></td>
     </tr>
   </table>
