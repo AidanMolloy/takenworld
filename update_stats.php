@@ -1,117 +1,109 @@
 <?php
-include("buildinginfo.php");
+include("safe.php");
 
-$attack = (1 * $unit['soldier'] + 3 * $unit['ranger'] + 2 * $unit['tank']);
+// Shop
+if($buildings['shoplvl'] == 1) {
+	$shoplvl = 1;
+	$shopcost = 100;
+}elseif($buildings['shoplvl'] == 2) {
+	$shoplvl = 2;
+	$shopcost = 400;
+}elseif($buildings['shoplvl'] == 3) {
+	$shoplvl = 3;
+	$shopcost = 2000;
+}elseif($buildings['shoplvl'] == 4) {
+	$shoplvl = 4;
+	$shopcost = 8000;
+}elseif($buildings['shoplvl'] == 5) {
+	$shoplvl = 5;
+	$shopcost = 16000;
+}elseif($buildings['shoplvl'] == 6) {
+	$shoplvl = 6;
+	$shopcost = 32000;
+}elseif($buildings['shoplvl'] == 7) {
+	$shoplvl = 7;
+	$shopcost = 64000;
+}elseif($buildings['shoplvl'] == 8) {
+	$shoplvl = 8;
+	$shopcost = 128000;
+}elseif($buildings['shoplvl'] == 9) {
+	$shoplvl = 9;
+	$shopcost = 256000;
+}elseif($buildings['shoplvl'] == 10) {
+	$shoplvl = 10;
+	$shopcost = 0;
+}else{ 
+$shoplvl = 0;
+$shopcost = 0;
+};
 
-$defence = (1 * $unit['soldier'] + 1 * $unit['ranger'] + 4 * $unit['tank']);
+//Farm
+if($buildings['farmlvl'] == 1) {
+	$farmlvl = 1;
+	$farmcost = 100;
+}elseif($buildings['farmlvl'] == 2) {
+	$farmlvl = 2;
+	$farmcost = 400;
+}elseif($buildings['farmlvl'] == 3) {
+	$farmlvl = 3;
+	$farmcost = 2000;
+}elseif($buildings['farmlvl'] == 4) {
+	$farmlvl = 4;
+	$farmcost = 8000;
+}elseif($buildings['farmlvl'] == 5) {
+	$farmlvl = 5;
+	$farmcost = 16000;
+}elseif($buildings['farmlvl'] == 6) {
+	$farmlvl = 6;
+	$farmcost = 32000;
+}elseif($buildings['farmlvl'] == 7) {
+	$farmlvl = 7;
+	$farmcost = 64000;
+}elseif($buildings['farmlvl'] == 8) {
+	$farmlvl = 8;
+	$farmcost = 128000;
+}elseif($buildings['farmlvl'] == 9) {
+	$farmlvl = 9;
+	$farmcost = 256000;
+}elseif($buildings['farmlvl'] == 10) {
+	$farmlvl = 10;
+	$farmcost = 0;
+}else{ 
+$farmlvl = 0; 
+$farmcost = 0;
+};
 
-$warehouse = $warehouselvl;
+//Warehouse
+if($buildings['warehouselvl'] == 1) {
+	$warehouselvl = 1;
+	$warehousecost = 400;
+}elseif($buildings['warehouselvl'] == 2) {
+	$warehouselvl = 2;
+	$warehousecost = 500;
+}elseif($buildings['warehouselvl'] == 3) {
+	$warehouselvl = 3;
+	$warehousecost = 2000;
+}elseif($buildings['warehouselvl'] == 4) {
+	$warehouselvl = 4;
+	$warehousecost = 8000;
+}elseif($buildings['warehouselvl'] == 5) {
+	$warehouselvl = 5;
+	$warehousecost = 30000;
+}elseif($buildings['warehouselvl'] == 6) {
+	$warehouselvl = 6;
+	$warehousecost = 80000;
+}elseif($buildings['warehouselvl'] == 7) {
+	$warehouselvl = 7;
+	$warehousecost = 200000;
+}elseif($buildings['warehouselvl'] == 8) {
+	$warehouselvl = 8;
+	$warehousecost = 800000;
+}elseif($buildings['warehouselvl'] == 9) {
+	$warehouselvl = 9;
+	$warehousecost = 1000000;
+}elseif($buildings['warehouselvl'] == 10) {
+	$warehouselvl = 10;
+}else{ $warehouselvl = 0; };
 
-if($shoplvl == 1) {
-	$income = 5;
-	$nxtlvlincome = 15;
-}elseif($shoplvl == 2) {
-	$income = 15;
-	$nxtlvlincome = 35;
-}elseif($shoplvl == 3) {
-	$income = 35;
-	$nxtlvlincome = 100;
-}elseif($shoplvl == 4) {
-	$income = 100;
-	$nxtlvlincome = 300;
-}elseif($shoplvl == 5) {
-	$income = 300;
-	$nxtlvlincome = 500;
-}elseif($shoplvl == 6) {
-	$income = 500;
-	$nxtlvlincome = 1500;
-}elseif($shoplvl == 7) {
-	$income = 1500;
-	$nxtlvlincome = 3000;
-}elseif($shoplvl == 8) {
-	$income = 3000;
-	$nxtlvlincome = 10000;
-}elseif($shoplvl == 9) {
-	$income = 10000;
-	$nxtlvlincome = 50000;
-}elseif($shoplvl == 10) {
-	$income = 50000;
-	$nxtlvlincome = 0;
-}else{
-	$income = 5;	
-}
 
-if($farmlvl == 1) {
-	$farming = 5;
-	$nxtlvlfarming = 15;
-}elseif($farmlvl == 2) {
-	$farming = 15;	
-	$nxtlvlfarming = 35;
-}elseif($farmlvl == 3) {
-	$farming = 35;
-	$nxtlvlfarming = 100;
-}elseif($farmlvl == 4) {
-	$farming = 100;
-	$nxtlvlfarming = 300;
-}elseif($farmlvl == 5) {
-	$farming = 300;
-	$nxtlvlfarming = 500;
-}elseif($farmlvl == 6) {
-	$farming = 500;
-	$nxtlvlfarming = 1500;
-}elseif($farmlvl == 7) {
-	$farming = 1500;
-	$nxtlvlfarming = 3000;
-}elseif($farmlvl == 8) {
-	$farming = 3000;
-	$nxtlvlfarming = 10000;
-}elseif($farmlvl == 9) {
-	$farming = 10000;
-	$nxtlvlfarming = 50000;
-}elseif($farmlvl == 10) {
-	$farming = 50000;
-	$nxtlvlfarming = 0;
-}else{
-	$farming = 5;	
-}
-
-if($warehouse == 1) {
-	$capacity = 500;
-	$nxtlvlcapacity = 1500;
-}elseif($warehouse == 2){
-	$capacity = 1500;
-	$nxtlvlcapacity = 4000;
-}elseif($warehouse == 3){
-	$capacity = 4000;
-	$nxtlvlcapacity = 13000;
-}elseif($warehouse == 4){
-	$capacity = 13000;
-	$nxtlvlcapacity = 40000;
-}elseif($warehouse == 5){
-	$capacity = 40000;
-	$nxtlvlcapacity = 120000;
-}elseif($warehouse == 6){
-	$capacity = 120000;
-	$nxtlvlcapacity = 350000;
-}elseif($warehouse == 7){
-	$capacity = 350000;
-	$nxtlvlcapacity = 1000000;
-}elseif($warehouse == 8){
-	$capacity = 1000000;
-	$nxtlvlcapacity = 3000000;
-}elseif($warehouse == 9){
-	$capacity = 3000000;
-	$nxtlvlcapacity = 9000000;
-}elseif($warehouse == 10){
-	$capacity = 9000000;
-	$nxtlvlcapacity = 0;
-}else{
-	$capacity = 500;
-}
-
-$update_stats = mysql_query("UPDATE `stats` SET 
-                            `income`='".$income."',`farming`='".$farming."',
-                            `attack`='".$attack."',`defence`='".$defence."',
-							`capacity`='".$capacity."'
-                            WHERE `id`='".$_SESSION['uid']."'") or die(mysql_error());
 ?>
