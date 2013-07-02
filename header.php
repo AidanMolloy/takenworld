@@ -20,10 +20,10 @@ include("user_stats.php");
     
     &nbsp; <div id="yourrank"><?php echo "$rrank" ?></div> &nbsp; 
     &nbsp; <div id="username"><?php echo $user['username']; ?></div> &nbsp;
-    &nbsp; <div id="yourenergy"><?php echo $stats['energy']; ?> / 100 Energy </div> &nbsp;
-    &nbsp; <div id="yourgold"><img src="images/gold_icon1.png" alt="Logo" width="22" height="21"  title="Gold"/><?php echo number_format($stats['gold']); ?> + <?php echo number_format($income); ?> Per Turn  / <?php echo number_format($capacity); ?> </div> &nbsp;
-    &nbsp; <div id="yourfood"><img src="images/food_icon.png" alt="Logo" width="27" height="23"  title="food"/><?php echo number_format($stats['food']); ?> + <?php echo number_format($farming); ?> Per Turn / <?php echo number_format($capacity); ?> </div> &nbsp;
-    
+    <div id="yourenergy"> &nbsp; <b> <?php echo $stats['energy']; ?> / 100 Energy </b> &nbsp; </div>
+    <div id="yourgold"> &nbsp; <b> <img src="images/gold_icon1.png" alt="Logo" width="22" height="21"  title="Gold"/><?php echo number_format($stats['gold']); ?> + <?php echo number_format($income); ?> Per Turn </b> &nbsp;</div>
+    <div id="yourfood"> &nbsp; <b> <img src="images/food_icon.png" alt="Logo" width="27" height="23"  title="food"/><?php echo number_format($stats['food']); ?> + <?php echo number_format($farming); ?> Per Turn </b> &nbsp;</div>
+    <div id="yourcapacity"> &nbsp; <b> Capacity: <?php echo number_format($capacity); ?> </b> &nbsp;</div>
     </div>
     
     <div id="navigationbar">
