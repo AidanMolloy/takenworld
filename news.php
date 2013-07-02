@@ -8,6 +8,18 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<center><h3>Version 1.7.5 BETA Released</h3><h5>2nd July 2013</h5></center>
+<center><h4>New in Version 1.7.5 BETA:</h4></center>
+
+<h4>
+  <center><li>Your Resources, Energy and Capacity now show in thick conjoining boxes!</li>
+  <li>More room added on the info bar to make it more spacious</li>
+  <li>Loads of More small bugs</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <center><h3>Version 1.7.0 BETA Released</h3><h5>24th June 2013</h5></center>
 <center><h4>New in Version 1.7.0 BETA:</h4></center>
 
