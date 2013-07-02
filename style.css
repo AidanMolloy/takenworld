@@ -36,7 +36,7 @@ body a {
 #infobar {
     background-color: #BCC2CC;
 	width: 1300px;
-	height: 30px;
+	height: 38px;
 	border-left: 1px solid #000000;
 	border-right: 1px solid #000000;
 	font-weight: bold;
@@ -44,43 +44,73 @@ body a {
     font-size: 16px;
 }
 
+#resourcetable {
+	text-align: right;
+	margin-top: -52px;	
+	margin-left: 530px;
+}
+
 #username {
 	text-align: left;
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 22px;
 	margin-left: 200px;
-	margin-top: -40px;
+	margin-top: -45px;
 	font-style: italic;
 }
 
 #yourrank {
 	text-align: left;
-	margin-top: -13px;
+	margin-top: -11px;
 	color: #00F;
-	font-size: 17px;
+	font-size: 19px;
 	margin-left: 50px;
 }
 
 #yourenergy {
-	margin-top: -41px;
-	font-style: italic;
+	padding-top: 10px;
+	height: 26px;
+	border: 1px solid #000000;
+	width: 140px;
+	margin-top: -53px;
 	font-size: 16px;
-	text-align: right;
-	margin-right: 850px;
+	text-align: center;
+	margin-left: 516px;
+	font-weight: bold;
 }
 
 #yourgold {
-	text-align: right;
-	margin-right: 480px;
-	margin-top: -47px;
+	padding-top: 5px;
+	height: 31px;
+	border: 1px solid #000000;
+	width: 240px;
+	text-align: center;
+	margin-left: 658px;
+	margin-top: -38px;
 	font-size: 15px;
 	font-weight: bold;
 }
 
 #yourfood {
-	text-align: right;
-    margin-right: 100px;
-	margin-top: -47px;
+	padding-top: 5px;
+	height: 31px;
+	text-align: center;
+	border: 1px solid #000000;
+	width: 240px;
+    margin-left: 898px;
+	margin-top: -38px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#yourcapacity {
+	padding-top: 10px;
+	height: 26px;
+	border: 1px solid #000000;
+	width: 160px;
+	text-align: center;
+	margin-left: 1138px;
+	margin-top: -38px;
 	font-size: 15px;
 	font-weight: bold;
 }
