@@ -8,6 +8,18 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<center><h3>Version 1.7.8 BETA Released</h3><h5>9th July 2013</h5></center>
+<center><h4>New in Version 1.7.8 BETA:</h4></center>
+
+<h4>
+  <center><li>Energy Box Removed</li>
+  <li>Energy progress bar added with a nice gradient to top it off</li>
+  <li>Small Layout issues fixed</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <center><h3>Version 1.7.5 BETA Released</h3><h5>2nd July 2013</h5></center>
 <center><h4>New in Version 1.7.5 BETA:</h4></center>
 
