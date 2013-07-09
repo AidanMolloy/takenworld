@@ -7,7 +7,7 @@ body a {
 }
 
 #header {
-  background-color: #898989;
+  background-color:#898989;
   width: 1300px;
   color: #FFFFFF;
   font-size: 30px;;
@@ -15,6 +15,7 @@ body a {
   text-align: center;
   height: 40px;
 }
+
 
 #output {
   margin-left: 25%;
@@ -68,14 +69,13 @@ body a {
 }
 
 #yourenergy {
+	margin-top: -55px;
+	margin-left: 375px;
 	padding-top: 10px;
 	height: 26px;
-	border: 1px solid #000000;
-	width: 140px;
-	margin-top: -53px;
+	width: 50px;
 	font-size: 16px;
 	text-align: center;
-	margin-left: 516px;
 	font-weight: bold;
 }
 
@@ -86,7 +86,7 @@ body a {
 	width: 240px;
 	text-align: center;
 	margin-left: 658px;
-	margin-top: -38px;
+	margin-top: -30px;
 	font-size: 15px;
 	font-weight: bold;
 }
