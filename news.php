@@ -8,8 +8,20 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<center><h3>Version 1.7.8 BETA Released</h3><h5>9th July 2013</h5></center>
+<center><h3>Version 1.7.8 BETA Released</h3><h5>12th July 2013</h5></center>
 <center><h4>New in Version 1.7.8 BETA:</h4></center>
+
+<h4>
+  <center><li>On registration you are required to re-type your password</li>
+  <li>Links to Taken World's Twitter and Facebook Pages can now be found in the page's footer</li>
+  <li>Small Layout issues fixed</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<center><h3>Version 1.7.6 BETA Released</h3><h5>9th July 2013</h5></center>
+<center><h4>New in Version 1.7.6 BETA:</h4></center>
 
 <h4>
   <center><li>Energy Box Removed</li>
