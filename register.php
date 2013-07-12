@@ -8,16 +8,19 @@ include("header.php");
 if(isset($_POST['register'])){
     $username = protect($_POST['username']);
     $password = protect($_POST['password']);
+	$confirmpassword = protect($_POST['confirmpassword']);
     $email = protect($_POST['email']);
     
-    if($username == "" || $password == "" || $email == ""){
+    if($username == "" || $password == "" || $confirmpassword == "" || $email == ""){
         echo "Please supply all fields!";
     }elseif(strlen($username) > 20){
         echo "Username must be less than 20 characters!";
     }elseif(strlen($email) > 90){
         echo "E-mail must be less than 90 characters!";
     }elseif(strlen($username) < 4){
-      echo "Username must have at least 4 letters";
+        echo "Username must have at least 4 letters";
+	}elseif($password != $confirmpassword) {
+	    echo "Your passwords do not match";
     }else{
         $register1 = mysql_query("SELECT `id` FROM `user` WHERE `username`='$username'") or die(mysql_error());
         $register2 = mysql_query("SELECT `id` FROM `user` WHERE `email`='$email'") or die(mysql_error());
@@ -40,6 +43,7 @@ if(isset($_POST['register'])){
 <form action="register.php" method="POST">
 Username: <input type="text" name="username"/><br />
 Password: <input type="password" name="password"/><br />
+Confirm Password: <input type="password" name="confirmpassword"/><br />
 E-mail: <input type="text" name="email"/><br />
 <input type="submit" name="register" value="Register"/>
 </form>
