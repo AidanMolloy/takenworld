@@ -197,6 +197,16 @@ body a {
   background-color: #F1F0F7;
 }
 
+#facebook {
+	margin-left: 1220px;
+	margin-top: -35px;
+}
+
+#twitter {
+	margin-left: 1150px;
+	margin-top: -40px;
+}
+
 #footer {
   background-color: #898989;
   width: 1300px;
