@@ -12,6 +12,7 @@ if(!isset($_SESSION['uid'])){
             <td width="50px"><b>Position</b></td>
             <td width="150px"><b>Username</b></td>
             <td width="200px"><b>Rank</b></td>
+            <td width="200px"><b>Country</b></td>
         </tr>
         <?php
         $get_users = mysql_query("SELECT `id`,`overall` FROM `ranking` WHERE `overall`>'0' ORDER BY `overall` ASC") or die(mysql_error());
@@ -24,6 +25,9 @@ if(!isset($_SESSION['uid'])){
             $get_rank = mysql_query("SELECT `rank` FROM `ranking` WHERE `id`='".$row['id']."'") or die(mysql_error());
             $rank_name = mysql_fetch_assoc($get_rank);
             echo "<td>" .$rank_name['rank']. "</td>";
+    		$get_country = mysql_query("SELECT `country` FROM `stats` WHERE `id`='".$row['id']."'") or die(mysql_error());
+            $country_name = mysql_fetch_assoc($get_country);
+            echo "<td>" .$country_name['country']. "</td>";
         }
         ?>
     </table></div>
