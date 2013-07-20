@@ -8,6 +8,29 @@ include("header.php");
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
+<center><h3>Version 1.0 Released</h3><h5>19th July 2013</h5></center>
+<center><h4>New in Version 1.0:</h4></center>
+
+<h4>
+  <center><li>Rubies Added!</li>
+  <li>Countries added!</li>
+  <li>Your Profile page now shows your attack and defence</li>
+  <li>Bug with energy progress bar fixed</li>
+  <li>Your profile now shows your country</li>
+  <li>Now get the same reputation for stealing gold as food</li>
+  <li>Now you get more reputation for attacking higher levels</li>
+  <li>Levels 21 - 27 added!</li>
+  <li>Level Progress Bar added!</li>
+  <li>Nice gradient added to the progress bars</li>
+  <li>Username has swapped places with your level on the info bar</li>
+  <li>Your country now is shown in the rankings</li>
+  <li>Edit your profile added!</li>
+  <li>A Few more glitches fixed</li></center>
+</h4>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 <center><h3>Version 1.7.8 BETA Released</h3><h5>12th July 2013</h5></center>
 <center><h4>New in Version 1.7.8 BETA:</h4></center>
 
