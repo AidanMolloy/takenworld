@@ -12,11 +12,13 @@ while($user = mysql_fetch_assoc($get_users)){
 	$gold = $user['gold'];
 	$food = $user['food'];
 	$energy = $user['energy'];
+	$rubies = $user['rubies'];
 	
 	//add
 	$gold += $user['income'];
 	$food += $user['farming'];
 	$energy += 5;
+	$rubies += 1;
 	
 	//check
 	if($gold > $user['capacity']) {
@@ -33,7 +35,8 @@ while($user = mysql_fetch_assoc($get_users)){
     $update = mysql_query("UPDATE `stats` SET
                         `gold`= '".$gold."',
                         `food`= '".$food."',
-                        `energy`= '".$energy."' WHERE `id`='".$user['id']."'") or die(mysql_error());
+                        `energy`= '".$energy."',
+						`rubies`= '".$rubies."' WHERE `id`='".$user['id']."'") or die(mysql_error());
 							
 }
 
