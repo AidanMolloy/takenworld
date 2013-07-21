@@ -1,5 +1,8 @@
 This is not a file on takenworld just for github!
 
 You can find this website on www.takenworld.com
-I try to update the code to github every day but sometimes I may be
-on a low connection to the internet and not get to update the code untill the following day
+The website was built for google chrome mainly it works but hasnt been fully tested on firefox
+and internet explorer isn't working so far at the moment I am focusing on those problems.
+
+The website doesnt work either on smaller screens but works on any screen that has browser window width of 1366.
+(http://whatsmy.browsersize.com/)
