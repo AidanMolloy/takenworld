@@ -1,7 +1,7 @@
 <?php
 
 function connect() {
-  mysql_connect("**********", "**********, "**********");
+  mysql_connect("**********", "**********", "**********");
   mysql_select_db("**********");
 }
 
