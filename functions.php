@@ -1,8 +1,8 @@
 <?php
 
 function connect() {
-  mysql_connect("localhost", "arm103_1", "T1ckT0ck");
-  mysql_select_db("arm103_game");
+  mysql_connect("**********", "**********, "**********");
+  mysql_select_db("**********");
 }
 
 function protect($string) {
